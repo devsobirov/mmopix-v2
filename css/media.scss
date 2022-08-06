@@ -1,0 +1,69 @@
+@import 'base/vars';
+
+@media screen and (max-width: $container-width) {
+    header {
+        nav {
+            .menu {gap: 1rem; .nav-link a{font-size: 14px;}}
+            .account > div {display: none;}
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header { nav {
+        .logo img {height: 38px;}
+        .menu {gap: .75rem;}
+        .actions {gap: 30px;}
+        .account {> div {display: none;}}
+    }}
+}
+
+@media screen and (max-width: 1000px) {
+    header { 
+        height: 90px;
+        nav {
+            .menu {display: none;}
+            .actions {width: 100%;justify-content: space-between; margin: 0 40px;}
+            .mobile-menu-toggler {display: block;}
+        }
+    }
+
+    footer {
+        .inner {width: 100%; gap: 33px;} //flex-wrap: wrap; .logo {width:100%}
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header { 
+        height: 80px;
+        nav {
+            gap: 30px;
+            .logo {> .logo-lg {display: none;} >.logo-sm {display: block;}}
+            .catalog {margin:0;}
+            .actions { gap: 15px; margin: 0;
+                .icons-bar {gap: 15px;}
+                .account {img {width: 40px; height: 40px;}}
+            }
+            .mobile-menu-toggler {display: block;}
+        }
+    }
+
+    footer {
+        .inner {
+            gap: 50px;
+            flex-wrap: wrap;
+            .logo, .payment-info {width: 100%;}
+            .links {width: auto;}
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header { nav {
+        .catalog { button {padding: 12px; span {display: none;}}}
+    }}
+    button {
+        padding: 12px;
+        span {display: none;}
+    }
+}

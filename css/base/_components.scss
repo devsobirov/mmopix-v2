@@ -1,0 +1,39 @@
+.container {
+    position: relative;
+    max-width: 100%;
+    width: $container_width;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background: none;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 500;
+    border-radius: $btn-radius;
+}
+
+.btn-icon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: $btn-radius;
+    font-weight: 500;
+}
+
+.btn-lg {
+    padding: $btn-lg-padding;
+}
+
+.btn-orange {
+    background-color: $orange;
+    color: $default_white;
+}
+
+.btn-half-orange {
+    background-color: $half_orange;
+    color: $orange;
+}

@@ -1,0 +1,100 @@
+@media screen and (max-width: 1200px) {
+  header nav .menu {
+    gap: 1rem;
+  }
+  header nav .menu .nav-link a {
+    font-size: 14px;
+  }
+  header nav .account > div {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header nav .logo img {
+    height: 38px;
+  }
+  header nav .menu {
+    gap: 0.75rem;
+  }
+  header nav .actions {
+    gap: 30px;
+  }
+  header nav .account > div {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header {
+    height: 90px;
+  }
+  header nav .menu {
+    display: none;
+  }
+  header nav .actions {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 40px;
+  }
+  header nav .mobile-menu-toggler {
+    display: block;
+  }
+  footer .inner {
+    width: 100%;
+    gap: 33px;
+  }
+}
+@media screen and (max-width: 700px) {
+  header {
+    height: 80px;
+  }
+  header nav {
+    gap: 30px;
+  }
+  header nav .logo > .logo-lg {
+    display: none;
+  }
+  header nav .logo > .logo-sm {
+    display: block;
+  }
+  header nav .catalog {
+    margin: 0;
+  }
+  header nav .actions {
+    gap: 15px;
+    margin: 0;
+  }
+  header nav .actions .icons-bar {
+    gap: 15px;
+  }
+  header nav .actions .account img {
+    width: 40px;
+    height: 40px;
+  }
+  header nav .mobile-menu-toggler {
+    display: block;
+  }
+  footer .inner {
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  footer .inner .logo, footer .inner .payment-info {
+    width: 100%;
+  }
+  footer .inner .links {
+    width: auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  header nav .catalog button {
+    padding: 12px;
+  }
+  header nav .catalog button span {
+    display: none;
+  }
+  button {
+    padding: 12px;
+  }
+  button span {
+    display: none;
+  }
+}/*# sourceMappingURL=media.css.map */

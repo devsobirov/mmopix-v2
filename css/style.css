@@ -1,0 +1,197 @@
+@font-face {
+  src: url("../fonts/TTNorms-Medium.otf");
+  font-family: "TTNorms-Medium";
+  font-style: normal;
+}
+* {
+  color: #fff;
+  font-family: "TTNorms-Medium";
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a, button {
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background: none;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  border-radius: 15px;
+}
+
+.btn-icon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.btn-lg {
+  padding: 15px 35px;
+}
+
+.btn-orange {
+  background-color: #E89F32;
+  color: #fff;
+}
+
+.btn-half-orange {
+  background-color: rgba(220, 151, 47, 0.2);
+  color: #E89F32;
+}
+
+body {
+  position: relative;
+  padding-top: 150px;
+  background-color: #20242D;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background: #272C37;
+  height: 100px;
+}
+header nav {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+header nav .logo > img {
+  height: 44px;
+}
+header nav .logo .logo-sm {
+  display: none;
+}
+header nav .catalog {
+  margin: 0 30px;
+}
+header nav .menu {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 30px;
+}
+header nav .actions {
+  display: flex;
+  gap: 60px;
+}
+header nav .actions .icons-bar {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+header nav .actions .icons-bar .icon-box {
+  position: relative;
+  cursor: pointer;
+}
+header nav .actions .icons-bar .icon-box svg {
+  width: 28px;
+  height: 28px;
+}
+header nav .actions .icons-bar .icon-box .count {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  background: #E89F32;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+  top: 3px;
+  right: 3px;
+  transform: translate(50%, -50%);
+}
+header nav .actions .account {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+header nav .actions .account > div {
+  font-weight: 500;
+}
+header nav .actions .account img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+header nav .mobile-menu-toggler {
+  display: none;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  background-color: #272C37;
+  padding: 40px 0;
+}
+footer .inner {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+  color: #5F6982;
+}
+footer .inner a, footer .inner p {
+  color: #5F6982;
+}
+footer .inner h5 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+footer .inner .logo {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+footer .inner .logo img {
+  height: 44px;
+}
+footer .inner .links {
+  width: 20%;
+}
+footer .inner .links li {
+  margin-bottom: 20px;
+}
+footer .inner .payment-info {
+  width: 35%;
+}
+footer .inner .payment-info img {
+  max-width: 100%;
+}/*# sourceMappingURL=style.css.map */
