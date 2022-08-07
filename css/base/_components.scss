@@ -1,3 +1,17 @@
+// Utils
+.flex {display: flex  !important;}
+.flex-wrap {flex-wrap: wrap  !important;}
+.flex-col {display: flex; flex-direction: column  !important;}
+.jc-sb {justify-content: space-between  !important;}
+.ai-center {align-items: center  !important;}
+.flex-sb-center {justify-content: space-between  !important; align-items: center  !important;}
+
+.text-white {color: $default_white;}
+.text-gray {color: $gray;}
+
+.mb-15 {margin-bottom: 15px !important;}
+.p-30 {padding: 30px !important;}
+
 .container {
     position: relative;
     max-width: 100%;
@@ -9,10 +23,12 @@
 
 .btn {
     display: inline-block;
+    padding: $btn-md-padding;
     text-align: center;
     vertical-align: middle;
     font-weight: 500;
     border-radius: $btn-radius;
+    cursor: pointer;
 }
 
 .btn-icon {
@@ -24,16 +40,61 @@
     font-weight: 500;
 }
 
+.btn-md {
+    padding: $btn-md-padding;
+}
 .btn-lg {
     padding: $btn-lg-padding;
 }
 
-.btn-orange {
+.btn-orange, .btn-primary {
     background-color: $orange;
     color: $default_white;
 }
 
-.btn-half-orange {
+.btn-half-orange, .btn-secondary {
     background-color: $half_orange;
+    color: $orange; 
+}
+
+.btn-secondary.active {
+    background: $orange;
+    color: $default_white;
+}
+
+.icon-single {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: $half_orange;
+}
+
+.icon-green {background: $green-15; border-radius: 7px;}
+
+.icon-control {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $half_black;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.card-icon-btn {
+    height: 50px;
+    width: 50x;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link-primary {
+    font-size: 16px;
+    font-weight: 400px;
     color: $orange;
 }
