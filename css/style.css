@@ -221,6 +221,10 @@ textarea {
   width: 100% !important;
 }
 
+.border-0 {
+  border: none !important;
+}
+
 .overflow-show {
   overflow: visible !important;
 }
@@ -538,7 +542,7 @@ textarea {
 .form-field {
   width: 100%;
   padding: 1rem 1.25rem;
-  background-color: #272C37;
+  background-color: #2C323E;
   color: white;
   font-size: 16px;
   line-height: 1.4;
@@ -1138,20 +1142,25 @@ footer .inner .payment-info img {
   font-size: 1rem;
   font-weight: 400;
 }
-.product-single-content .main-content .service-info {
+.product-single-content .service-info {
   display: flex;
   flex-wrap: wrap;
 }
-.product-single-content .main-content .service-info .service-features {
+.product-single-content .service-info .order-options {
+  display: grid;
+  grid-template-columns: 5fr 4fr 4fr 4fr;
+  gap: 20px;
+}
+.product-single-content .service-info .service-features {
   width: 100%;
 }
-.product-single-content .main-content .service-info .service-features .feature-item {
+.product-single-content .service-info .service-features .feature-item {
   display: flex;
   align-items: flex-start;
   gap: 15px;
   margin-bottom: 15px;
 }
-.product-single-content .main-content .service-info .service-action {
+.product-single-content .service-info .service-action {
   width: 100%;
   align-self: flex-end;
   display: flex;
@@ -1159,15 +1168,18 @@ footer .inner .payment-info img {
   padding-top: 1.25rem;
   border-top: 1px solid rgba(95, 105, 130, 0.15);
 }
-.product-single-content .main-content .service-info .product-price {
+.product-single-content .service-info .product-price {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.product-single-content .main-content .service-info .product-price span {
+.product-single-content .service-info .product-price span {
   color: #E89F32;
 }
-.product-single-content .main-content .service-info .product-price del {
+.product-single-content .service-info .product-price span.unit {
+  color: #5F6982;
+}
+.product-single-content .service-info .product-price del {
   color: #5F6982;
 }
 .product-single-content .madia-content, .product-single-content .details-content {

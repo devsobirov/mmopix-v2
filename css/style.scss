@@ -349,37 +349,43 @@ footer {
             .category-title {font-size: 1rem; color: $gray; font-weight: 400;}
             .category-detail {font-size: 1rem; font-weight: 400;}
         }
+    }
 
-        .service-info {
-            display: flex;
-            flex-wrap: wrap;
+    .service-info {
+        display: flex;
+        flex-wrap: wrap;
 
-            .service-features {
-                width: 100%;
+        .order-options {
+            display: grid;
+            grid-template-columns: 5fr 4fr 4fr 4fr;
+            gap: 20px;
+        }
+        .service-features {
+            width: 100%;
 
-                .feature-item {
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 15px;
-                    margin-bottom: 15px;
-                }
-            }
-            .service-action {
-                width: 100%;
-                align-self: flex-end;
+            .feature-item {
                 display: flex;
+                align-items: flex-start;
                 gap: 15px;
-                padding-top: 1.25rem;
-                border-top: $border-default;
+                margin-bottom: 15px;
             }
+        }
+        .service-action {
+            width: 100%;
+            align-self: flex-end;
+            display: flex;
+            gap: 15px;
+            padding-top: 1.25rem;
+            border-top: $border-default;
+        }
 
-            .product-price {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                span {color: $orange_primary;}
-                del {color: $gray;}
-            }
+        .product-price {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            span {color: $orange_primary;}
+            span.unit {color: $gray;}
+            del {color: $gray;}
         }
     }
 

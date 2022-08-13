@@ -45,7 +45,9 @@
 
 .w-100 {width: 100% !important;}
 
+.border-0 {border: none !important;}
 .overflow-show {overflow: visible !important;}
+
 .container {
     position: relative;
     max-width: 100%;
@@ -310,7 +312,7 @@
 .form-field {
     width: 100%;
     padding: 1rem 1.25rem;
-    background-color: $black_bg;
+    background-color: $black_hover;
     color: white;
     font-size: 16px;
     line-height: 1.4;
