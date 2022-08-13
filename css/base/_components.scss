@@ -39,8 +39,11 @@
 .mb-30 {margin-bottom: 30px !important;}
 .mb-40 {margin-bottom: 30px !important;}
 
+.pt-50 {padding-top: 50px;}
 .p-5 {padding: 5px !important;}
 .p-30 {padding: 30px !important;}
+
+.w-100 {width: 100% !important;}
 
 .overflow-show {overflow: visible !important;}
 .container {
@@ -76,6 +79,18 @@
     transition: all .35s;
 }
 
+.btn-basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 24px;
+    border-radius: $btn-radius;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .35s;
+    svg {fill: white; height: 24px; width: 24px;}
+}
 .btn-md {
     padding: $btn-md-padding;
 }
@@ -87,6 +102,7 @@
     background-color: $orange_primary;
     color: $white;
     &:hover {background-color: $orange_light;}
+    svg {fill: white;}
 }
 
 .btn-dark {
@@ -123,7 +139,12 @@
     &:hover {background-color: $orange-30;}
 }
 
-.icon-green {background: $green-15; border-radius: 7px; cursor: pointer;}
+.icon-green {
+    background: $green-15; border-radius: 7px; cursor: pointer; 
+    padding: 0 10px;
+    svg {fill: $green; width: 22px; height: 22px;}
+    &:hover {background: $green-15;}
+}
 
 .icon-control {
     width: 45px;
@@ -136,7 +157,8 @@
     margin: 0 5px;
     cursor: pointer;
     transition: all .35s;
-    //&:hover {svg {fill: $white !important; stroke: $white;}}
+    svg {fill: $gray;}
+    &:hover {svg {fill: $white !important;}} // stroke: $white;
 }
 
 .card-icon-btn {
@@ -154,7 +176,7 @@
     color: $orange_primary;
     cursor: pointer;
     transition: all .35s;
-    &:hover {background-color: $orange_light}
+    &:hover {color: $orange_light}
 }
 
 .nav-link:hover, .nav-link.active, .nav-link:hover > a, .nav-link.active > a {color: $orange_primary; transition: all .35s;}
@@ -167,6 +189,17 @@
     font-weight: 500;
     font-size: 14px;
 }
+.badge-discount {
+    display: flex;
+    align-items: center;
+    padding: .75rem .375rem;
+    border-radius: 15px;
+    background-color: $orange-20;
+    color: $orange_primary;
+    font-weight: 500;
+    font-size: 16px;
+}
+
 .badge-primary { background-color: $orange-20; color: $orange_primary;}
 
 .card-wrapper {
@@ -245,6 +278,7 @@
     height: 1.25rem;
     background-color: $black_hover;
     border-radius: 6px;
+    transition: all 350ms;
 
     &:checked{
         background-color: $orange_primary;
@@ -266,6 +300,13 @@
     }
 }
 
+.checkbox-secondary:checked {
+    background-color: $orange-20;
+    &::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.8047 3.52859C14.0651 3.78894 14.0651 4.21105 13.8047 4.4714L6.4714 11.8047C6.21106 12.0651 5.78894 12.0651 5.5286 11.8047L2.19526 8.4714C1.93491 8.21105 1.93491 7.78894 2.19526 7.52859C2.45561 7.26824 2.87772 7.26824 3.13807 7.52859L6 10.3905L12.8619 3.52859C13.1223 3.26824 13.5444 3.26824 13.8047 3.52859Z' fill='rgb(232,159,50)'/%3E%3C/svg%3E");
+    }
+}
+
 .form-field {
     width: 100%;
     padding: 1rem 1.25rem;
@@ -278,12 +319,6 @@
     &::placeholder {color: $gray;}
     &:hover, &:focus {background-color: $black_hover;}
 }
-
-/* input[type="range"]:focus,
-input[type="number"]:focus {
-  box-shadow: 0 0 3px 1px #4b81dd;
-  outline: none;
-} */
 
 .input-range {
     -webkit-appearance: none;
@@ -349,4 +384,18 @@ input[type="number"]:focus {
         border: none;
         background: transparent;
     }
+}
+
+.input-textarea {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 30px;
+    background: $black_bg;
+    border-radius: 20px;
+    &::placeholder {color: $gray;}
+    &:hover, &:focus {background-color: $black_hover;}
 }

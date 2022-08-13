@@ -4,6 +4,7 @@ $black_bg: #272C37;
 $black_hover: #2C323E;
 $gray: #5F6982;
 $gray-25: rgba(95, 105, 130, .25);
+$gray-15: rgba(95, 105, 130, .15);
 $orange_primary: #E89F32;
 $orange_light: #FABD48;
 $orange-20:  rgba(220, 151, 47, 0.2);
@@ -14,10 +15,12 @@ $green: #42A05D;
 $green-15: rgba(66, 160, 93, .15);
 
 // sizes
-$container_width: 1200px;
+$container_width: 1218px;
 $header_height: 100px;
 $section_limiter: 100px;
 
 $btn-md-padding: 8px 20px;
 $btn-lg-padding: 15px 35px;
 $btn-radius: 15px;
+
+$border-default: 1px solid $gray-15;
