@@ -1445,4 +1445,13 @@ footer .inner .payment-info img {
 }
 .feedback > * + * {
   margin-top: 1rem;
+}
+
+.policy-content {
+  min-height: 40vh;
+}
+.policy-content p {
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */
