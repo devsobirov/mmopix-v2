@@ -99,8 +99,14 @@ textarea {
 }
 
 .flex-sb-center {
+  display: flex;
   justify-content: space-between !important;
   align-items: center !important;
+}
+
+.items-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .items-3 {
@@ -202,11 +208,19 @@ textarea {
 }
 
 .mb-40 {
-  margin-bottom: 30px !important;
+  margin-bottom: 40px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.pt-20 {
+  padding-top: 20px !important;
 }
 
 .pt-50 {
-  padding-top: 50px;
+  padding-top: 50px !important;
 }
 
 .p-5 {
@@ -231,6 +245,18 @@ textarea {
 
 .overflow-show {
   overflow: visible !important;
+}
+
+.border-top {
+  border-top: 1px solid rgba(95, 105, 130, 0.15);
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(95, 105, 130, 0.15);
+}
+
+.fs-14 {
+  font-size: 14px;
 }
 
 .container {
@@ -458,15 +484,21 @@ textarea {
 .card .card-category {
   display: flex;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 .card .card-category .card-icon {
-  color: #5F6982;
-  font-size: 16px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: #5F6982;
+  font-size: 16px;
+  margin-right: 1.25rem;
+}
+.card .card-category .card-icon svg {
+  fill: #5F6982;
+  width: 18px;
+  height: 18px;
 }
 
 .label-input {
@@ -844,6 +876,8 @@ header nav .mobile-menu-toggler {
 .card-product .card-banner {
   height: 10rem;
   background-size: cover;
+  border-radius: 16px;
+  background-position: top center;
 }
 .card-product .card-actions {
   display: flex;
@@ -1454,4 +1488,57 @@ footer .inner .payment-info img {
   margin-bottom: 1.5rem;
   font-weight: 400;
   font-size: 1rem;
+}
+
+.section-order h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.section-order .basket-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section-order .card-basket {
+  min-height: auto;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  align-items: start;
+  padding: 30px;
+}
+.section-order .card-basket .card-banner {
+  height: 8.75rem;
+}
+.section-order .card-basket .card-content {
+  position: relative;
+  padding: 1.25rem;
+}
+.section-order .card-basket .card-content .icon-delete {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.section-order .card-basket .card-content .icon-delete svg {
+  fill: #5F6982;
+  width: 24px;
+  height: 24px;
+}
+.section-order .payment-methods img {
+  display: block;
+  height: 3.5rem;
+}
+.section-order .product-price {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-order .product-price span {
+  color: #E89F32;
+}
+.section-order .product-price span.unit {
+  color: #5F6982;
+}
+.section-order .product-price del {
+  color: #5F6982;
 }/*# sourceMappingURL=style.css.map */
