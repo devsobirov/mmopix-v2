@@ -571,3 +571,8 @@ footer {
 .feature-subject {
     font-size: 1.5rem; font-weight: 700;margin-bottom: 10px;
 }
+
+.section-instructions {
+    .instruction-order {font-size: 3.125rem; font-weight: 700; color: $orange_primary}
+    .instruction-subject {font-size: 18px; font-weight: 700;}
+}

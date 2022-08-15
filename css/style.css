@@ -1612,4 +1612,14 @@ footer .inner .payment-info img {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 10px;
+}
+
+.section-instructions .instruction-order {
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: #E89F32;
+}
+.section-instructions .instruction-subject {
+  font-size: 18px;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
