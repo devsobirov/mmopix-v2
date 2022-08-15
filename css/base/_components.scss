@@ -6,6 +6,7 @@
 .jc-sb {justify-content: space-between  !important;}
 .jc-center {justify-content: center  !important;}
 .ai-center {align-items: center  !important;}
+.ai-start {align-items: flex-start !important;}
 .flex-sb-center {display: flex; justify-content: space-between  !important; align-items: center  !important;}
 
 .items-2 {display:grid; grid-template-columns: repeat(2, 1fr);}
@@ -47,6 +48,9 @@
 .p-30 {padding: 30px !important;}
 
 .w-100 {width: 100% !important;}
+.w-50 {width: 50% !important;}
+.w-45 {width: 45% !important;}
+.w-40 {width: 40% !important;}
 
 .text-bold {font-weight: 700 !important;}
 .border-0 {border: none !important;}

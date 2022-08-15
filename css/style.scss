@@ -540,3 +540,34 @@ footer {
         del {color: $gray;}
     }
 }
+
+.banner-full {
+    width: 100%;
+    height: 27rem;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    position: relative;
+
+    h3 {font-size: 1.5rem; font-weight: 700;}
+    .outline-img {
+        position: absolute;
+        bottom: 0;
+        img {display: block; width: 100%;}
+    }
+    .banner-suppliers {left: calc(50% + 95px);}
+    .banner-about {right: 20px;}
+}
+
+.feature-icon {
+    display: flex; align-items: center; justify-content: center;
+    min-width: 66px; width: 66px; height: 66px; border-radius: 50%; background-color: $orange_primary;
+    svg {fill: $white; width: 28px; height: 28px;}
+}
+.feature-content {
+    display: block; width: auto;
+}
+.feature-subject {
+    font-size: 1.5rem; font-weight: 700;margin-bottom: 10px;
+}
