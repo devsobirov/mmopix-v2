@@ -409,12 +409,13 @@ footer {
         .icon-control.right {right: 2%;}
         .icon-control.left {left: 2%;}
     }
+}
 
-    .toggle-navbar {
-        display: flex; align-items: center; gap: 30px; border-bottom: $border-default; margin-bottom: 30px;
-        .toggle-link {font-size: 1rem; font-weight: 400; color: $gray; padding-bottom: 10px;}
-        .toggle-link.active {color: $white; border-bottom: 2px solid $orange_primary;}
-    }
+
+.toggle-navbar {
+    display: flex; align-items: center; gap: 30px; border-bottom: $border-default; margin-bottom: 30px;
+    .toggle-link {font-size: 1rem; font-weight: 400; color: $gray; padding-bottom: 10px;}
+    .toggle-link.active {color: $white; border-bottom: 2px solid $orange_primary;}
 }
 
 .comments {
@@ -588,4 +589,15 @@ footer {
     .card-category, .card-title a {margin-bottom: 0;}
     .card-actions .price { background: none; padding: 0; min-height: auto; p {color: $orange_primary; font-size: 18px;}}
     .order-status {position: absolute; top: 30px; right: 30px;}
+}
+
+.profile-forms {
+    display: flex; flex-direction: column; padding: 30px; width: 100%; max-width: 56rem;
+    .profile-form.show {display: flex; align-items: flex-start; gap: 30px;}
+    .profile-form {display: none;}
+    .data-inputs {width: 35%;}
+    .media-inputs {
+        display: flex; flex-direction: column; align-items: flex-start;
+        .profile-image img {display:block; width: 90px; height: 90px; border-radius: 50%;}
+    }
 }

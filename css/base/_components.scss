@@ -37,6 +37,7 @@
 .mt-10 {margin-top: 10px !important;}
 
 .mb-15 {margin-bottom: 15px !important;}
+.mb-20 {margin-bottom: 20px !important;}
 .mb-25 {margin-bottom: 25px !important;}
 .mb-30 {margin-bottom: 30px !important;}
 .mb-40 {margin-bottom: 40px !important;}
@@ -92,6 +93,13 @@
     font-weight: 500;
     cursor: pointer;
     transition: all .35s;
+}
+
+.btn-telegram {
+    background-color: $light-blue;
+    padding: $btn-lg-padding;
+    border-radius: $btn-radius;
+    svg {width: 24px; height: 24px; fill: white;}
 }
 
 .btn-basket {
@@ -266,6 +274,13 @@
     position: relative;
     overflow: hidden;
     border-radius: 15px;
+}
+.label-col {
+    display: flex; flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    input {border-radius: 15px;}
+    .label-text {color: $gray; font-size: 14px; gap: 5px;}
 }
 
 .label-select {
