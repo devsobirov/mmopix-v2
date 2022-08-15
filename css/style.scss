@@ -573,6 +573,19 @@ footer {
 }
 
 .section-instructions {
-    .instruction-order {font-size: 3.125rem; font-weight: 700; color: $orange_primary}
+    .instruction-order {font-size: 3.125rem; font-weight: 700; color: $orange_primary;}
     .instruction-subject {font-size: 18px; font-weight: 700;}
+}
+
+.card-order {
+    display: flex; flex-direction: row; align-items: flex-start; gap: 30px; 
+    min-height: auto; position: relative; padding: 30px; 
+    .card-banner {height: 10rem; width: 17.5rem;border-radius: 15px;}
+    .order-details {
+        display: flex; align-items: center; gap: 20px;
+        span {color: $gray; font-size: 1rem; font-weight: 400;}
+    }
+    .card-category, .card-title a {margin-bottom: 0;}
+    .card-actions .price { background: none; padding: 0; min-height: auto; p {color: $orange_primary; font-size: 18px;}}
+    .order-status {position: absolute; top: 30px; right: 30px;}
 }

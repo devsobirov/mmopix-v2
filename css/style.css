@@ -219,6 +219,10 @@ textarea {
   margin-bottom: 50px !important;
 }
 
+.p-0 {
+  padding: 0 !important;
+}
+
 .pt-20 {
   padding-top: 20px !important;
 }
@@ -459,6 +463,22 @@ textarea {
   color: #E89F32;
   font-weight: 500;
   font-size: 16px;
+}
+
+.badge-status {
+  padding: 10px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.badge-success {
+  background: #42A05D;
+}
+
+.badge-warning {
+  background: #E89F32;
 }
 
 .badge-primary {
@@ -1622,4 +1642,46 @@ footer .inner .payment-info img {
 .section-instructions .instruction-subject {
   font-size: 18px;
   font-weight: 700;
+}
+
+.card-order {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  min-height: auto;
+  position: relative;
+  padding: 30px;
+}
+.card-order .card-banner {
+  height: 10rem;
+  width: 17.5rem;
+  border-radius: 15px;
+}
+.card-order .order-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.card-order .order-details span {
+  color: #5F6982;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.card-order .card-category, .card-order .card-title a {
+  margin-bottom: 0;
+}
+.card-order .card-actions .price {
+  background: none;
+  padding: 0;
+  min-height: auto;
+}
+.card-order .card-actions .price p {
+  color: #E89F32;
+  font-size: 18px;
+}
+.card-order .order-status {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }/*# sourceMappingURL=style.css.map */
