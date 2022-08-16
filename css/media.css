@@ -202,6 +202,9 @@
   .suppliers-page .section-instructions .items-3.gap-30, .about-page .section-instructions .items-3.gap-30 {
     gap: 20px !important;
   }
+  .profile-forms .data-inputs {
+    width: 50%;
+  }
   .section.comments textarea {
     height: 200px;
   }
@@ -468,6 +471,18 @@
   }
   .suppliers-page .section-reviews .items-3, .about-page .section-reviews .items-3 {
     grid-template-columns: 1fr;
+  }
+  .profile-form {
+    flex-direction: column;
+  }
+  .profile-form .data-inputs {
+    width: 100%;
+    order: 2;
+  }
+  .profile-form .media-inputs {
+    order: 0;
+    width: 100%;
+    align-items: center;
   }
   .section.comments .section-title {
     margin-bottom: 1.25rem;

@@ -79,6 +79,11 @@
         }
     }
 
+    // Profile settings
+
+    .profile-forms .data-inputs {
+        width: 50%;
+    }
     //Comments section
     .section.comments {
         textarea {height: 200px;}
@@ -223,6 +228,13 @@
         }}
     }
 
+    // Profile settings
+
+    .profile-form {
+        flex-direction: column;
+        .data-inputs {width: 100%; order: 2;}
+        .media-inputs {order: 0; width: 100%; align-items: center;}
+    }
     // Commennts
     .section.comments {
         .section-title {margin-bottom: 1.25rem;}
