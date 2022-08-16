@@ -61,6 +61,7 @@
 .btn-orange, .btn-primary {
     background-color: $orange_primary;
     color: $white;
+    white-space: nowrap;
     &:hover {background-color: $orange_light;}
     svg {fill: white;}
 }

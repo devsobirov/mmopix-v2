@@ -11,7 +11,8 @@
    .section-counter { .gap-40 {gap: 20px !important;}}
 }
 
-@media (min-width:768px) and (max-width: 992px) {
+@media (max-width: 992px) { //(min-width:768px) and
+
     // Homepage
    .section-games, .section-coins, .section-services {
         .card-wrapper {grid-template-columns: repeat(3, 1fr); gap: 20px;}
@@ -34,8 +35,35 @@
         }
         form.items-4 {grid-template-columns: 2fr 3fr;}
         .btn-dark {padding: 15px; font-size: 14px;}
-   }
-   
+    }
+
+    // Product page
+
+    .product-single {
+        grid-template-columns: 1fr;
+        //.product-single {flex-direction: row; flex-wrap: wrap; gap: 20px; .category-info, .service-info {width: 100%;}}
+        .main-content {grid-template-columns: 1fr;}
+        .category-info {order: 1;}
+        .service-info {order: 0; .order-options {grid-template-columns: repeat(3, 1fr); width: 100%;}}
+    }
+
+    .section-games {
+        .items-4 {grid-template-columns: repeat(3, 1fr) !important;}
+    }
+    //Comments section
+
+    .section.comments {
+        textarea {height: 200px;}
+        .comment-action .policy {max-width: initial; width: auto; display: block;}
+        .comment-reply {
+            margin-top: 1.25rem;
+            padding-left: 2.5rem;
+            .comment-reply { 
+                padding-left: 1rem; 
+                .comment-reply {padding-left: .25rem}
+            }
+        }
+    }
 
 }
 
@@ -62,7 +90,10 @@
         .icon-single {border-radius: 50%;}
     }
 
-    .section-games { .toggle-menu {margin-bottom: 30px;}}
+    .section-games { 
+        .toggle-menu {margin-bottom: 30px;}
+        .items-4 {grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important;}
+    }
     .card-wrapper {grid-template-columns: repeat(2, 1fr); column-gap: 15px; row-gap: 20px;}
     .card-product {
         .card-category {flex-direction: column; align-items: start; gap: 10px;}
@@ -87,4 +118,42 @@
         .btn-dark {padding: 15px; font-size: 14px;}
         .pagination .btn {width: 100%;}
    }
+
+   // Product page
+   .product-single {
+        display: flex; flex-direction: column;
+
+        .main-content {grid-template-columns: 1fr;}
+        .feature-item, .category-item, .category-detail, .badge-discount {font-size: 14px !important;}
+        .category-detail {text-align: right; max-width: 50%;}
+        .category-info {order: 1;}
+        .service-info {order: 0;
+            .btn-basket {font-size: 14px; padding: 15px 12px; gap: 6px;}
+            .product-price {white-space: nowrap; font-size: 14px;}
+            // coins page
+            .order-options {grid-template-columns: 1fr; width: 100%;}
+        }
+        .media-wrapper {height: 7.5rem; img {height: 7.5rem; max-height: 7.5rem;}}
+        .toggle-navbar {overflow-x: auto; white-space: nowrap;}
+        
+    }
+
+    // Commennts
+    .section.comments {
+        .section-title {margin-bottom: 1.25rem;}
+        textarea {height: 200px;}
+        .comment-action {
+            flex-direction: column; align-items: flex-start; justify-content: start;
+            .btn {width: 100%;}
+            .policy {max-width: 80%; width: auto; display: block;}
+        }
+        .comment-reply {
+            margin-top: 1.25rem;
+            padding-left: 2.5rem;
+            .comment-reply { 
+                padding-left: 1rem; 
+                .comment-reply {padding-left: .25rem}
+            }
+        }
+    }
 }

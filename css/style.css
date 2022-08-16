@@ -356,6 +356,7 @@ textarea {
 .btn-orange, .btn-primary {
   background-color: #E89F32;
   color: #fff;
+  white-space: nowrap;
 }
 .btn-orange:hover, .btn-primary:hover {
   background-color: #FABD48;

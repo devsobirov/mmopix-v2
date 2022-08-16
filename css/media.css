@@ -111,7 +111,7 @@
     gap: 20px !important;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 992px) {
   .section-games .card-wrapper, .section-coins .card-wrapper, .section-services .card-wrapper {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -144,6 +144,43 @@
   .category-page .btn-dark {
     padding: 15px;
     font-size: 14px;
+  }
+  .product-single {
+    grid-template-columns: 1fr;
+  }
+  .product-single .main-content {
+    grid-template-columns: 1fr;
+  }
+  .product-single .category-info {
+    order: 1;
+  }
+  .product-single .service-info {
+    order: 0;
+  }
+  .product-single .service-info .order-options {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+  .section-games .items-4 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .section.comments textarea {
+    height: 200px;
+  }
+  .section.comments .comment-action .policy {
+    max-width: initial;
+    width: auto;
+    display: block;
+  }
+  .section.comments .comment-reply {
+    margin-top: 1.25rem;
+    padding-left: 2.5rem;
+  }
+  .section.comments .comment-reply .comment-reply {
+    padding-left: 1rem;
+  }
+  .section.comments .comment-reply .comment-reply .comment-reply {
+    padding-left: 0.25rem;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -181,6 +218,10 @@
   }
   .section-games .toggle-menu {
     margin-bottom: 30px;
+  }
+  .section-games .items-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
   }
   .card-wrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -238,5 +279,78 @@
   }
   .category-page .pagination .btn {
     width: 100%;
+  }
+  .product-single {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-single .main-content {
+    grid-template-columns: 1fr;
+  }
+  .product-single .feature-item, .product-single .category-item, .product-single .category-detail, .product-single .badge-discount {
+    font-size: 14px !important;
+  }
+  .product-single .category-detail {
+    text-align: right;
+    max-width: 50%;
+  }
+  .product-single .category-info {
+    order: 1;
+  }
+  .product-single .service-info {
+    order: 0;
+  }
+  .product-single .service-info .btn-basket {
+    font-size: 14px;
+    padding: 15px 12px;
+    gap: 6px;
+  }
+  .product-single .service-info .product-price {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .product-single .service-info .order-options {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .product-single .media-wrapper {
+    height: 7.5rem;
+  }
+  .product-single .media-wrapper img {
+    height: 7.5rem;
+    max-height: 7.5rem;
+  }
+  .product-single .toggle-navbar {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .section.comments .section-title {
+    margin-bottom: 1.25rem;
+  }
+  .section.comments textarea {
+    height: 200px;
+  }
+  .section.comments .comment-action {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+  }
+  .section.comments .comment-action .btn {
+    width: 100%;
+  }
+  .section.comments .comment-action .policy {
+    max-width: 80%;
+    width: auto;
+    display: block;
+  }
+  .section.comments .comment-reply {
+    margin-top: 1.25rem;
+    padding-left: 2.5rem;
+  }
+  .section.comments .comment-reply .comment-reply {
+    padding-left: 1rem;
+  }
+  .section.comments .comment-reply .comment-reply .comment-reply {
+    padding-left: 0.25rem;
   }
 }/*# sourceMappingURL=media.css.map */
