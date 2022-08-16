@@ -125,6 +125,12 @@
   .section-counter .gap-40 {
     gap: 20px !important;
   }
+  .section-counter .card-counter {
+    padding: 40px 25px;
+  }
+  .section-counter .counter-count {
+    white-space: nowrap;
+  }
   .category-page .category-content {
     grid-template-columns: 2fr 1fr;
     gap: 20px;
@@ -180,6 +186,21 @@
   }
   .order-page .order-actions {
     order: 0;
+  }
+  .suppliers-page .page-header, .about-page .page-header {
+    margin-bottom: 0;
+  }
+  .suppliers-page .banner-outline, .about-page .banner-outline {
+    justify-content: center;
+  }
+  .suppliers-page .banner-outline .w-45, .about-page .banner-outline .w-45 {
+    width: 100% !important;
+  }
+  .suppliers-page .banner-outline .outline-img, .about-page .banner-outline .outline-img {
+    display: none;
+  }
+  .suppliers-page .section-instructions .items-3.gap-30, .about-page .section-instructions .items-3.gap-30 {
+    gap: 20px !important;
   }
   .section.comments textarea {
     height: 200px;
@@ -404,6 +425,49 @@
   }
   .order-page .section-order .payment-methods img {
     max-height: 3rem;
+  }
+  .suppliers-page .page-header, .about-page .page-header {
+    margin-bottom: 0;
+  }
+  .suppliers-page .banner-outline, .about-page .banner-outline {
+    padding: 20px;
+    height: auto;
+  }
+  .suppliers-page .banner-outline h3, .about-page .banner-outline h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .suppliers-page .banner-outline p, .about-page .banner-outline p {
+    font-size: 14px;
+  }
+  .suppliers-page .banner-outline .btn-primary, .about-page .banner-outline .btn-primary {
+    padding: 15px;
+    margin: auto;
+  }
+  .suppliers-page .section-instructions .items-3.gap-30, .about-page .section-instructions .items-3.gap-30 {
+    gap: 20px !important;
+  }
+  .suppliers-page .section-instructions .instruction-order, .about-page .section-instructions .instruction-order {
+    font-size: 2.25rem;
+  }
+  .suppliers-page .section-instructions .instruction-subject, .about-page .section-instructions .instruction-subject {
+    font-size: 18px;
+  }
+  .suppliers-page .section-instructions .instruction-subject, .about-page .section-instructions .instruction-subject {
+    font-size: 14px;
+  }
+  .suppliers-page .feature-items .card.gap-30, .about-page .feature-items .card.gap-30 {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+  .suppliers-page .feature-items .feature-subject, .about-page .feature-items .feature-subject {
+    font-size: 1.25rem;
+  }
+  .suppliers-page .feature-items .feature-body, .about-page .feature-items .feature-body {
+    font-weight: 14px;
+  }
+  .suppliers-page .section-reviews .items-3, .about-page .section-reviews .items-3 {
+    grid-template-columns: 1fr;
   }
   .section.comments .section-title {
     margin-bottom: 1.25rem;
