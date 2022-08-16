@@ -3,7 +3,7 @@
 @import 'responsive/_header';
 
 // Homepage
-@media (min-width: 992px) and (max-width: $container-width) {
+@media (min-width: 993px) and (max-width: $container-width) {
     .card-wrapper {gap: 20px}
     .section-reviews, .section-blog {
         .gap-30 {gap: 20px !important;}
@@ -12,6 +12,7 @@
 }
 
 @media (min-width:768px) and (max-width: 992px) {
+    // Homepage
    .section-games, .section-coins, .section-services {
         .card-wrapper {grid-template-columns: repeat(3, 1fr); gap: 20px;}
    } 
@@ -23,9 +24,22 @@
         .gap-30 {gap: 20px !important;}
    }
    .section-counter { .gap-40 {gap: 20px !important;}}
+
+   // Category & Search-results
+   .category-page {
+        .category-content { 
+            grid-template-columns: 2fr 1fr; gap: 20px; 
+            .items-3 {grid-template-columns: repeat(2, 1fr);} .gap-30 {gap: 20px !important;}
+            .card-product .card-actions {gap: 15px;}
+        }
+        form.items-4 {grid-template-columns: 2fr 3fr;}
+        .btn-dark {padding: 15px; font-size: 14px;}
+   }
+   
+
 }
 
-@media (min-width: 339px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
     
     .section {
         margin-bottom: $section-limiter-mob;
@@ -33,6 +47,12 @@
             justify-content: start; font-size: 1.25rem; gap: 10px; svg {display: none;}
         }
     }
+
+    .page-header {
+        .breadcrumb a, .breadcrumb span {font-size: 14px;}
+        .page-title {font-size: 1.25rem;}
+    }
+
     .items-3 {grid-template-columns: 1fr;}
     .items-3.gap-30 {gap: 20px !important;}
 
@@ -50,4 +70,21 @@
     }
 
     .items-5 {grid-template-columns: repeat(2, 1fr); column-gap: 15px !important; row-gap: 20px !important;}
+
+    // Category & search-results pages
+
+    .category-page {
+        form.items-4 {
+            grid-template-columns: 1fr 1fr; gap: 15px; 
+            .filters-toggle {display: block;} * {font-size: 14px;}
+        }
+        .category-content { 
+            .category-sidebar {display: none;}
+            grid-template-columns: repeat(1, 1fr); gap: 15px; 
+            .items-3 {grid-template-columns: repeat(2, 1fr);} .gap-30 {gap: 15px !important;}
+            .card-product .card-actions {gap: 15px;}
+        }
+        .btn-dark {padding: 15px; font-size: 14px;}
+        .pagination .btn {width: 100%;}
+   }
 }
