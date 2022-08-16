@@ -235,6 +235,17 @@
         .data-inputs {width: 100%; order: 2;}
         .media-inputs {order: 0; width: 100%; align-items: center;}
     }
+
+    // My orders 
+    .card-order {
+        flex-direction: column; align-items: flex-start;
+        .card-banner {width: 100%; height: 12.5rem;}
+        .order-details {
+            justify-content: space-between; flex-wrap: wrap; gap: initial; 
+            margin-bottom: 5px; width: 100%; span {margin-right: 15px;}}
+        .order-status {position: static; width: auto; .badge-status {display: inline-block;}}
+    }
+    //.card-basket {grid-template-columns: 1fr; padding: 20px !important; .card-banner {height: 12.5rem;}}
     // Commennts
     .section.comments {
         .section-title {margin-bottom: 1.25rem;}
