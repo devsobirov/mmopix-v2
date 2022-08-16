@@ -1,0 +1,64 @@
+// Utils
+.flex {display: flex  !important;}
+.row {display: flex; flex-direction: row !important;}
+.flex-wrap {flex-wrap: wrap  !important;}
+.flex-col {display: flex; flex-direction: column  !important;}
+.jc-sb {justify-content: space-between  !important;}
+.jc-center {justify-content: center  !important;}
+.ai-center {align-items: center  !important;}
+.ai-start {align-items: flex-start !important;}
+.flex-sb-center {display: flex; justify-content: space-between  !important; align-items: center  !important;}
+
+.items-2 {display:grid; grid-template-columns: repeat(2, 1fr);}
+.items-3 {display:grid; grid-template-columns: repeat(3, 1fr);}
+.items-4 {display:grid; grid-template-columns: repeat(4, 1fr);}
+.items-5 {display:grid; grid-template-columns: repeat(5, 1fr);}
+
+.grid-col-3 {grid-template-columns: repeat(3, 1fr);grid-gap: 25px;}
+.grid-col-4 {grid-template-columns: repeat(4, 1fr);grid-gap: 30px;}
+.grid-col-5 {grid-template-columns: repeat(5, 1fr);grid-gap: 40px;}
+
+.gap-10 {gap: 10px !important;}
+.gap-15 {gap: 15px !important;}
+.gap-20 {gap: 20px !important;}
+.gap-30 {gap: 30px !important;}
+.gap-40 {gap: 40px !important;}
+
+.row-gap-10 {row-gap: 10px !important;}
+.row-gap-15 {row-gap: 15px !important;}
+.row-gap-20 {row-gap: 20px !important;}
+.row-gap-30 {row-gap: 30px !important;}
+.row-gap-40 {row-gap: 40px !important;}
+
+.text-white {color: $white;}
+.text-primary {color: $orange_primary;}
+.text-gray {color: $gray;}
+
+.mt-10 {margin-top: 10px !important;}
+
+.mb-15 {margin-bottom: 15px !important;}
+.mb-20 {margin-bottom: 20px !important;}
+.mb-25 {margin-bottom: 25px !important;}
+.mb-30 {margin-bottom: 30px !important;}
+.mb-40 {margin-bottom: 40px !important;}
+.mb-50 {margin-bottom: 50px !important;}
+
+.p-0 {padding: 0 !important;}
+.pt-20 {padding-top: 20px !important;}
+.pt-50 {padding-top: 50px !important;}
+.p-5 {padding: 5px !important;}
+.p-30 {padding: 30px !important;}
+
+.w-100 {width: 100% !important;}
+.w-50 {width: 50% !important;}
+.w-45 {width: 45% !important;}
+.w-40 {width: 40% !important;}
+
+.text-bold {font-weight: 700 !important;}
+.border-0 {border: none !important;}
+.overflow-show {overflow: visible !important;}
+
+.border-top {border-top: $border-default}
+.border-bottom {border-bottom: $border-default}
+
+.fs-14 {font-size: 14px;}

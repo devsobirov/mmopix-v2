@@ -1,2 +1,0 @@
-style="background: linear-gradient(360deg, #20242D 0%, rgba(32, 36, 45, 0) 18.51%),
-            url(./img/products/product_bg.png) center top /100% auto no-repeat rgba(39, 44, 55, .9);"
