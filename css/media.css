@@ -264,7 +264,9 @@
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 15px !important;
   }
-  .card-wrapper {
+  .card-wrapper, .section-games .card-wrapper,
+.section-coins .card-wrapper,
+.section-services .card-wrapper {
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 15px;
          column-gap: 15px;
