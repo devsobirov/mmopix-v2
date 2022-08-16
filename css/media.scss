@@ -114,7 +114,7 @@
         .page-title {font-size: 1.25rem;}
     }
 
-    .items-3 {grid-template-columns: 1fr;}
+    .items-3, .section-reviews .items-3, .section-blog .items-3 {grid-template-columns: 1fr;}
     .items-3.gap-30 {gap: 20px !important;}
 
     .card-service {
