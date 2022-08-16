@@ -56,6 +56,9 @@
         .items-3.gap-30 {column-gap: 20px !important; row-gap: 30px !important;}
     }
 
+    // FAQ page 
+    .faq-page {.feedback {margin: 0 25%;}}
+
     //Comments section
     .section.comments {
         textarea {height: 200px;}
@@ -156,6 +159,14 @@
         .toggle-navbar {overflow-x: auto; white-space: nowrap;}
         
     }
+
+    // FAQ page & policy
+    .faq-items .faq-subject .question-mark {min-width: 60px; min-height: 60px;}
+    .faq-intro, .faq-items .faq-subject .question {font-size: 14px;}
+    .faq-items .faq-answer {font-size: 13px;}
+    .faq-page {.feedback {margin: 0 10%; .feedback-title {font-size: 1.25rem; } .feedback-title + p {font-size: 14px;}}}
+
+    .section-policy { .policy-content * {font-size: 14px;}}
 
     // Commennts
     .section.comments {
