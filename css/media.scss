@@ -50,8 +50,13 @@
     .section-games {
         .items-4 {grid-template-columns: repeat(3, 1fr) !important;}
     }
-    //Comments section
 
+    // Blog & news
+    .section-blog {
+        .items-3.gap-30 {column-gap: 20px !important; row-gap: 30px !important;}
+    }
+
+    //Comments section
     .section.comments {
         textarea {height: 200px;}
         .comment-action .policy {max-width: initial; width: auto; display: block;}
@@ -119,6 +124,20 @@
         .pagination .btn {width: 100%;}
    }
 
+   // Blog & article pages
+   .section-blog {
+        .items-3.gap-30 {grid-template-columns: 1fr;}
+        .btn-primary {width: 100%;}
+    }
+    .article {
+        min-height: initial;
+        .article-info { 
+            flex-direction: column; align-items: flex-start; gap: 15px; margin-top: 20px;
+            .article-share {width: 100%; justify-content: flex-end;}
+            .article-meta { white-space: nowrap;} //width:100%; justify-content: space-between;
+        }
+    }
+    
    // Product page
    .product-single {
         display: flex; flex-direction: column;
