@@ -59,6 +59,12 @@
     // FAQ page 
     .faq-page {.feedback {margin: 0 25%;}}
 
+    // Order page
+    .order-page {
+        .items-2 {grid-template-columns: 1fr !important;}
+        .basket {order: 1;} .order-actions {order: 0;}
+    }
+
     //Comments section
     .section.comments {
         textarea {height: 200px;}
@@ -168,6 +174,14 @@
 
     .section-policy { .policy-content * {font-size: 14px;}}
 
+    // Order page
+    .order-page {
+        h3 {font-size: 1.125rem;}
+        .order-form {.row.gap-20 {flex-direction: column !important;}}
+        .card-basket {grid-template-columns: 1fr; padding: 20px !important; .card-banner {height: 12.5rem;}}
+        .section-order .payment-methods { > .card {gap: initial !important; justify-content: space-between;} img {max-height: 3rem;}}
+    }
+    
     // Commennts
     .section.comments {
         .section-title {margin-bottom: 1.25rem;}

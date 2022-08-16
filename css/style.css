@@ -1610,6 +1610,7 @@ footer .inner .payment-info img {
 }
 .section-order .card-basket .card-banner {
   height: 8.75rem;
+  border-radius: 16px;
 }
 .section-order .card-basket .card-content {
   position: relative;

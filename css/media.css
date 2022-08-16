@@ -172,6 +172,15 @@
   .faq-page .feedback {
     margin: 0 25%;
   }
+  .order-page .items-2 {
+    grid-template-columns: 1fr !important;
+  }
+  .order-page .basket {
+    order: 1;
+  }
+  .order-page .order-actions {
+    order: 0;
+  }
   .section.comments textarea {
     height: 200px;
   }
@@ -375,6 +384,26 @@
   }
   .section-policy .policy-content * {
     font-size: 14px;
+  }
+  .order-page h3 {
+    font-size: 1.125rem;
+  }
+  .order-page .order-form .row.gap-20 {
+    flex-direction: column !important;
+  }
+  .order-page .card-basket {
+    grid-template-columns: 1fr;
+    padding: 20px !important;
+  }
+  .order-page .card-basket .card-banner {
+    height: 12.5rem;
+  }
+  .order-page .section-order .payment-methods > .card {
+    gap: initial !important;
+    justify-content: space-between;
+  }
+  .order-page .section-order .payment-methods img {
+    max-height: 3rem;
   }
   .section.comments .section-title {
     margin-bottom: 1.25rem;
