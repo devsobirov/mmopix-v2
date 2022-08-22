@@ -42,6 +42,7 @@ header {
             display: flex;
             align-items: center;
             margin: 0 30px;
+            button, button > span {color: $orange_primary; font-size: 1rem; font-weight: 500;}
 
             .submenu {
                 position: absolute;
@@ -64,7 +65,10 @@ header {
                         margin-bottom: 20px;
                         h4 {font-size: 18px; line-height: 150%;}
                     }
-                    ul li {margin-bottom: 15px;}
+                    ul li {
+                        margin-bottom: 15px; transition: all .4s; 
+                        a {transition: inherit; &:hover {color: $orange_primary}}
+                    }
                 }
                 
             }
@@ -79,6 +83,8 @@ header {
             display: flex;
             gap: 1.5rem;
             margin-right: 30px;
+            right: 100%;
+            transition: all .4s;
             .close-icon {visibility: hidden;}
         }
 
@@ -122,9 +128,11 @@ header {
 
                 >div {font-weight: 500;}
                 img {width: 44px; height: 44px; border-radius: 50%;}
+                svg {width: 10px; height: 6px; fill: $gray;}
 
-                .submenu {
-                    display: none;
+                .submenu {top: 50px; display: none;}
+                .submenu.expand {
+                    display: block;
                     position: absolute;
                     width: 15rem;
                     right: -2rem;
@@ -133,11 +141,17 @@ header {
                     border: 1px solid #2F3646;
                     padding: 0;
                     border-radius:30px;
+                    transition: all .4s;
 
-                    li {border-bottom: 1px solid $gray; padding: 20px; &:last-of-type {border-bottom: none;}}
+                    li {
+                        border-bottom: $border-default; padding: 20px; 
+                        &:last-of-type {border-bottom: none;}
+                        &:hover {background-color: $black_hover;}
+                        transition: all .2s;
+                    }
                 }
                 
-                &:hover > .submenu {display: block;}
+                //&:hover > .submenu {display: block;}
             }
         }
         .mobile-menu-toggler {display: none;  cursor: pointer; svg {width: 28px; height: 28px; fill: $white;}}
@@ -162,7 +176,24 @@ header {
         }
     }
 
-    .controls {display: flex; gap: 10px;}
+    .controls {
+        display: flex; gap: 10px;
+    }
+
+    .icon-control {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $black_bg;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: all .35s;
+        svg {width: 24px; height: 24px; fill: $gray; transition: inherit;}
+        &:hover {background-color: $gray-25; svg {fill: $white;}}
+    }
 
     .toggle-menu {display: flex;align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 40px;}
 }
@@ -170,6 +201,12 @@ header {
 .card-service {
     .icon-single {min-height: 50px; min-width: 50px; svg {fill: $orange_primary; width: 20px; height: 20px;}}
     .card-content {flex-direction: row; align-items: center; padding: 15px; gap: 15px;}
+    transition: all .5s;
+
+    &:hover {
+        .service-title.nav-link {color: $white;}
+        .icon-single {background-color: $orange-30;}
+    }
 }
 
 .card-product {
@@ -189,6 +226,15 @@ header {
             p {font-size: 16px; font-weight: 500; color: $white}
             del, .unit {font-size: 14px; font-weight: 400; color: $gray;}
         }
+    }
+    
+}
+
+.card-product, .card-article {
+    transition: all .6s;
+    &:hover {
+        transform: translateY(-24px);
+        .card-title, .card-title a {color: $orange_primary;}
     }
 }
 
@@ -241,7 +287,8 @@ footer {
             gap: 15px;
             img {height: 44px;}
         }
-
+        
+        ul.menu li a {transition: .5s ease-in; &:hover {color: $orange_primary;}}
         .links { width: 20%; li {margin-bottom: 20px;}}
 
         .payment-info {
@@ -467,6 +514,7 @@ footer {
                 .comment-meta {
                     display:flex; align-items: center; gap: 10px;
                     .author {font-weight: 500; font-size: 1rem;}
+                    .date {color: $gray;}
                     .admin {color: $orange_primary;}
                     .secondary {font-size: 14px; color: $gray;}
                 }
@@ -579,6 +627,7 @@ footer {
     align-items: center;
     overflow: visible;
     position: relative;
+    border-radius: 60px;
 
     h3 {font-size: 1.5rem; font-weight: 700;}
     .outline-img {

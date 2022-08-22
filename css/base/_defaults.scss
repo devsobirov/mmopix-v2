@@ -3,23 +3,27 @@
     font-family: "TTNorms-Medium";
     font-style: normal;
     font-weight: 400;
+    font-feature-settings: 'liga' off;
 }
 @font-face {
     src: url('../fonts/TTNorms-Italic.ttf');
     font-family: "TTNorms-Medium";
     font-style: italic;
+    font-feature-settings: 'liga' off;
 }
 @font-face {
     src: url('../fonts/TTNorms-Medium.ttf');
     font-family: "TTNorms-Medium";
     font-style: normal;
     font-weight: 500;
+    font-feature-settings: 'liga' off;
 }
 @font-face {
     src: url('../fonts/TTNorms-Bold.ttf');
     font-family: "TTNorms-Medium";
     font-style: normal;
     font-weight: 700;
+    font-feature-settings: 'liga' off;
 }
 
 * {

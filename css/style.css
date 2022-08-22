@@ -3,23 +3,27 @@
   font-family: "TTNorms-Medium";
   font-style: normal;
   font-weight: 400;
+  font-feature-settings: "liga" off;
 }
 @font-face {
   src: url("../fonts/TTNorms-Italic.ttf");
   font-family: "TTNorms-Medium";
   font-style: italic;
+  font-feature-settings: "liga" off;
 }
 @font-face {
   src: url("../fonts/TTNorms-Medium.ttf");
   font-family: "TTNorms-Medium";
   font-style: normal;
   font-weight: 500;
+  font-feature-settings: "liga" off;
 }
 @font-face {
   src: url("../fonts/TTNorms-Bold.ttf");
   font-family: "TTNorms-Medium";
   font-style: normal;
   font-weight: 700;
+  font-feature-settings: "liga" off;
 }
 * {
   color: #fff;
@@ -293,6 +297,10 @@ textarea {
   overflow-x: hidden;
 }
 
+.pagination {
+  padding: 6px 0;
+}
+
 .btn {
   display: inline-block;
   box-sizing: border-box;
@@ -321,11 +329,15 @@ textarea {
   background-color: #168DC8;
   padding: 15px 35px;
   border-radius: 15px;
+  transition: all 0.4s;
 }
 .btn-telegram svg {
   width: 24px;
   height: 24px;
   fill: white;
+}
+.btn-telegram:hover {
+  background-color: rgba(22, 141, 200, 0.5);
 }
 
 .btn-basket {
@@ -357,17 +369,23 @@ textarea {
   background-color: #E89F32;
   color: #fff;
   white-space: nowrap;
-}
-.btn-orange:hover, .btn-primary:hover {
-  background-color: #FABD48;
+  transition: all 0.4s;
 }
 .btn-orange svg, .btn-primary svg {
   fill: white;
+}
+.btn-orange:hover, .btn-primary:hover {
+  background-color: #FABD48;
+  box-shadow: 0 0 0 6px rgba(220, 151, 47, 0.2);
 }
 
 .btn-dark {
   background-color: #2C323E;
   color: #5F6982;
+}
+.btn-dark:hover {
+  background-color: #FABD48;
+  box-shadow: 0 0 0 6px rgba(220, 151, 47, 0.2);
 }
 
 .btn-primary.btn-lg:hover, .btn-primary.btn-lg:hover {
@@ -415,25 +433,6 @@ textarea {
 }
 .icon-green:hover {
   background: rgba(66, 160, 93, 0.15);
-}
-
-.icon-control {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #272C37;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: all 0.35s;
-}
-.icon-control svg {
-  fill: #5F6982;
-}
-.icon-control:hover svg {
-  fill: #fff !important;
 }
 
 .card-icon-btn {
@@ -809,6 +808,11 @@ header nav .catalog {
   align-items: center;
   margin: 0 30px;
 }
+header nav .catalog button, header nav .catalog button > span {
+  color: #E89F32;
+  font-size: 1rem;
+  font-weight: 500;
+}
 header nav .catalog .submenu {
   position: absolute;
   width: 80%;
@@ -834,6 +838,13 @@ header nav .catalog .submenu .subline .subline-title h4 {
 }
 header nav .catalog .submenu .subline ul li {
   margin-bottom: 15px;
+  transition: all 0.4s;
+}
+header nav .catalog .submenu .subline ul li a {
+  transition: inherit;
+}
+header nav .catalog .submenu .subline ul li a:hover {
+  color: #E89F32;
 }
 header nav .catalog.expand > .submenu {
   display: flex;
@@ -847,6 +858,8 @@ header nav .menu {
   display: flex;
   gap: 1.5rem;
   margin-right: 30px;
+  right: 100%;
+  transition: all 0.4s;
 }
 header nav .menu .close-icon {
   visibility: hidden;
@@ -898,8 +911,17 @@ header nav .actions .account img {
   height: 44px;
   border-radius: 50%;
 }
+header nav .actions .account svg {
+  width: 10px;
+  height: 6px;
+  fill: #5F6982;
+}
 header nav .actions .account .submenu {
+  top: 50px;
   display: none;
+}
+header nav .actions .account .submenu.expand {
+  display: block;
   position: absolute;
   width: 15rem;
   right: -2rem;
@@ -908,16 +930,18 @@ header nav .actions .account .submenu {
   border: 1px solid #2F3646;
   padding: 0;
   border-radius: 30px;
+  transition: all 0.4s;
 }
-header nav .actions .account .submenu li {
-  border-bottom: 1px solid #5F6982;
+header nav .actions .account .submenu.expand li {
+  border-bottom: 1px solid rgba(95, 105, 130, 0.15);
   padding: 20px;
+  transition: all 0.2s;
 }
-header nav .actions .account .submenu li:last-of-type {
+header nav .actions .account .submenu.expand li:last-of-type {
   border-bottom: none;
 }
-header nav .actions .account:hover > .submenu {
-  display: block;
+header nav .actions .account .submenu.expand li:hover {
+  background-color: #2C323E;
 }
 header nav .mobile-menu-toggler {
   display: none;
@@ -959,6 +983,30 @@ header nav .mobile-menu-toggler svg {
   display: flex;
   gap: 10px;
 }
+.section .icon-control {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #272C37;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+.section .icon-control svg {
+  width: 24px;
+  height: 24px;
+  fill: #5F6982;
+  transition: inherit;
+}
+.section .icon-control:hover {
+  background-color: rgba(95, 105, 130, 0.25);
+}
+.section .icon-control:hover svg {
+  fill: #fff;
+}
 .section .toggle-menu {
   display: flex;
   align-items: center;
@@ -967,6 +1015,9 @@ header nav .mobile-menu-toggler svg {
   margin-bottom: 40px;
 }
 
+.card-service {
+  transition: all 0.5s;
+}
 .card-service .icon-single {
   min-height: 50px;
   min-width: 50px;
@@ -981,6 +1032,12 @@ header nav .mobile-menu-toggler svg {
   align-items: center;
   padding: 15px;
   gap: 15px;
+}
+.card-service:hover .service-title.nav-link {
+  color: #fff;
+}
+.card-service:hover .icon-single {
+  background-color: rgba(220, 151, 47, 0.3);
 }
 
 .card-product {
@@ -1019,6 +1076,16 @@ header nav .mobile-menu-toggler svg {
   font-size: 14px;
   font-weight: 400;
   color: #5F6982;
+}
+
+.card-product, .card-article {
+  transition: all 0.6s;
+}
+.card-product:hover, .card-article:hover {
+  transform: translateY(-24px);
+}
+.card-product:hover .card-title, .card-product:hover .card-title a, .card-article:hover .card-title, .card-article:hover .card-title a {
+  color: #E89F32;
 }
 
 .card-review .review-icon, .card-review .review-content, .card-review .review-date {
@@ -1099,6 +1166,12 @@ footer .inner .logo {
 }
 footer .inner .logo img {
   height: 44px;
+}
+footer .inner ul.menu li a {
+  transition: 0.5s ease-in;
+}
+footer .inner ul.menu li a:hover {
+  color: #E89F32;
 }
 footer .inner .links {
   width: 20%;
@@ -1444,6 +1517,9 @@ footer .inner .payment-info img {
   font-weight: 500;
   font-size: 1rem;
 }
+.comments .comment-items .comment .comment-head .comment-meta .date {
+  color: #5F6982;
+}
 .comments .comment-items .comment .comment-head .comment-meta .admin {
   color: #E89F32;
 }
@@ -1673,6 +1749,7 @@ footer .inner .payment-info img {
   align-items: center;
   overflow: visible;
   position: relative;
+  border-radius: 60px;
 }
 .banner-full h3 {
   font-size: 1.5rem;

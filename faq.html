@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <script src="./js/alpine.js" defer></script>
 </head>
 <body>
     <header>
@@ -161,7 +162,7 @@
 
     <main>
 
-        <section class="section faq-page pt-50">
+        <section class="section faq-page pt-50" x-data="pageData">
 
             <div class="container">
 
@@ -342,5 +343,15 @@
         </div>
     </footer>
 
+    <script src="./js/alpine-init.js"></script>
+    <script>
+        function pageData() {return {}}
+        document.querySelectorAll('.faq-item').forEach(el => {
+            el.addEventListener('click', (e) => {
+                let parent = e.target.closest('.faq-item');
+                parent.classList.toggle('toggled');
+            })
+        })
+    </script>
 </body>
 </html>

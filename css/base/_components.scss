@@ -8,6 +8,7 @@
     overflow-x: hidden;
 }
 
+.pagination {padding: 6px 0;}
 .btn {
     display: inline-block;
     box-sizing: border-box;
@@ -36,7 +37,9 @@
     background-color: $light-blue;
     padding: $btn-lg-padding;
     border-radius: $btn-radius;
+    transition: all .4s;
     svg {width: 24px; height: 24px; fill: white;}
+    &:hover {background-color: $light-blue-50}
 }
 
 .btn-basket {
@@ -62,13 +65,27 @@
     background-color: $orange_primary;
     color: $white;
     white-space: nowrap;
-    &:hover {background-color: $orange_light;}
+    transition: all .4s;
     svg {fill: white;}
+    &:hover {background-color: $orange_light; box-shadow: 0 0 0 6px rgba(220, 151, 47, 0.2);} 
+
+    //background-clip: border-box;
+    //border: 6px solid transparent;
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0; left: 0; right: 0; bottom: 0; transition: inherit;
+    //     margin: -5px; border-radius: 15px;
+    //     z-index: 2;
+    // }
+    //filter: drop-shadow(0 0 6px rgba(220, 151, 47, 0.75));
+    //&:hover::after {background-color: $orange-20;}
 }
 
 .btn-dark {
     background-color: $black_hover;
     color: $gray;
+    &:hover {background-color: $orange_light; box-shadow: 0 0 0 6px rgba(220, 151, 47, 0.2);} 
 }
 
 .btn-primary.btn-lg:hover, .btn-primary.btn-lg:hover {
@@ -105,21 +122,6 @@
     padding: 0 10px;
     svg {fill: $green; width: 22px; height: 22px;}
     &:hover {background: $green-15;}
-}
-
-.icon-control {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $black_bg;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: all .35s;
-    svg {fill: $gray;}
-    &:hover {svg {fill: $white !important;}} // stroke: $white;
 }
 
 .card-icon-btn {

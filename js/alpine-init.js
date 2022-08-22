@@ -4,6 +4,9 @@ document.addEventListener('alpine:init', () => {
 
     Alpine.data('globalData', () => ({
         isCatalogMenuOpen: false,
-        isMobileMenuOpen: true
+        isMobileMenuOpen: false,
+        isAccoutMenuOpen: false,
+        isSearchMenuOpen: false,
+        isNotificationsMenuOpen: false
     }))
 })
