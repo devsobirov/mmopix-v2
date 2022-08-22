@@ -8,8 +8,10 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="lib/slick/slick.css">
+    <link rel="stylesheet" href="lib/slick/slick-theme.css">
+
     <script src="./js/alpine.js" defer></script>
-    <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
 
 </head>
 <body>
@@ -176,7 +178,8 @@
             <section class="section section-banner pt-50">
                 <div class="carousel-wrapper">
                     <div class="carousel">
-                        <div class="carousel-item">
+                        <div class="carousel-item" style="background: linear-gradient(90.08deg, rgba(39, 44, 55, 0.95) 29.04%, rgba(39, 44, 55, 0.79) 42.18%, rgba(39, 44, 55, 0.58) 48.63%, rgba(39, 44, 55, 0) 61.27%), 
+                            url(img/banner_main.jpg);">
                             <div class="carousel-inner">
                                 <div class="banner-title">
                                     <h3>Только у нас <span class="text-primary">скидка 40%</span> на Cyberpunk 2077</h3>
@@ -203,10 +206,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" style="background: linear-gradient(90.08deg, rgba(39, 44, 55, 0.95) 29.04%, rgba(39, 44, 55, 0.79) 42.18%, rgba(39, 44, 55, 0.58) 48.63%, rgba(39, 44, 55, 0) 61.27%), 
+                            url(img/main_banner3.jpg) no-repeat top center / cover;">
                             <div class="carousel-inner">
                                 <div class="banner-title">
-                                    <h3>Только у нас <span class="text-primary">скидка 40%</span> на Cyberpunk 2077</h3>
+                                    <h3>Только у нас <span class="text-primary">скидка 25%</span> на GTA 5 STEAM </h3>
                                 </div>
                                 <div class="banner-description">
                                     <p>Идейные соображения высшего порядка, а также новая модель организационной деятельности играет важную.</p>
@@ -230,7 +234,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" style="background: linear-gradient(90.08deg, rgba(39, 44, 55, 0.95) 29.04%, rgba(39, 44, 55, 0.79) 42.18%, rgba(39, 44, 55, 0.58) 48.63%, rgba(39, 44, 55, 0) 61.27%), 
+                            url(img/banner_main2.jpg);">
                             <div class="carousel-inner">
                                 <div class="banner-title">
                                     <h3>Только у нас <span class="text-primary">скидка 30%</span> на Fortnine</h3>
@@ -257,13 +262,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-controls">
-                        <div class="control-item"></div>
-                        <div class="control-item active"></div>
-                        <div class="control-item"></div>
-                        <div class="control-item"></div>
-                        <div class="control-item"></div>
                     </div>
                 </div>
                 <div class="services">
@@ -1428,7 +1426,17 @@
             </div>
         </div>
     </footer>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./lib/slick/slick.min.js"></script>
     <script src="./js/alpine-init.js"></script>
+    <script>
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+        });
+    </script>
 </body>
 </html>
