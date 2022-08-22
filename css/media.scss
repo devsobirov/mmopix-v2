@@ -14,6 +14,16 @@
 @media (max-width: 992px) { //(min-width:768px) and
 
     // Homepage
+    .carousel-wrapper {
+        .carousel {width: 100%; margin: 0 auto;}
+        .carousel-item {
+            padding-left: 4.75rem;
+            padding-right: 4.75rem;
+            .carousel-inner {
+                max-width: 80%;
+            }
+        }
+    }
    .section-games, .section-coins, .section-services {
         .card-wrapper {grid-template-columns: repeat(3, 1fr); gap: 20px;}
    } 
@@ -101,7 +111,6 @@
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-    
     .section {
         margin-bottom: $section-limiter-mob;
         .section-title h3 {
@@ -117,6 +126,24 @@
     .items-3, .section-reviews .items-3, .section-blog .items-3 {grid-template-columns: 1fr;}
     .items-3.gap-30 {gap: 20px !important;}
 
+    .section-banner {
+        padding-top: 0 !important;
+        .container:first-of-type {padding: 0; width: 100%; max-width: 100%;}
+    }
+    .carousel-wrapper {
+        border-radius: 0px;
+        .carousel-item {
+            padding-left: 2.75rem;
+            padding-right: 2.75rem;
+            .carousel-inner {
+                max-width: 100%;
+                width: 100%;
+                .banner-title {max-width: 75%; h3 {font-size: 1.25rem;}}
+                .banner-description {font-size: 14px; max-width: 100%;}
+            }
+        }
+    }
+ 
     .card-service {
         .card-content {padding: .5rem;}
         .service-title {font-size: 14px;}
