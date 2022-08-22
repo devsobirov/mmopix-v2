@@ -1013,6 +1013,10 @@ header nav .mobile-menu-toggler svg {
   margin-bottom: 40px;
 }
 
+.section-games .toggle-menu {
+  margin-bottom: 15px;
+}
+
 .carousel-wrapper {
   position: relative;
   width: 100%;
@@ -1150,8 +1154,12 @@ header nav .mobile-menu-toggler svg {
 }
 
 .card-product, .card-article {
+  background: transparent;
   cursor: pointer;
   transition: all 0.6s;
+}
+.card-product .card-content, .card-article .card-content {
+  background-color: #272C37;
 }
 .card-product:hover, .card-article:hover {
   transform: translateY(-24px);
@@ -1949,4 +1957,30 @@ footer .inner .payment-info img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
+}
+
+.product-multirow-carousel {
+  margin-left: -30px;
+}
+.product-multirow-carousel .slick-slide {
+  margin-left: 30px;
+  padding-top: 25px;
+}
+.product-multirow-carousel .slick-slide > div + div {
+  margin-top: 30px;
+}
+
+.section-blog .section-title {
+  margin-bottom: 15px;
+}
+
+.reviews-carousel, .blog-carousel {
+  margin-left: -30px;
+}
+.reviews-carousel .slick-slide, .blog-carousel .slick-slide {
+  margin-left: 30px;
+}
+
+.blog-carousel .slick-slide {
+  padding-top: 25px;
 }/*# sourceMappingURL=style.css.map */
