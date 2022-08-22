@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="globalData">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <script src="./js/alpine.js" defer></script>
+    <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+
 </head>
 <body>
     <header>
@@ -17,8 +20,8 @@
                     <img class="logo-lg" src="img/logo.png" alt="MMOPIX">
                     <img class="logo-sm" src="img/logo_short.png" alt="MMOPIX">
                 </a>
-                <div class="catalog">
-                    <button type="button" class="btn-icon btn-lg btn-half-orange">
+                <div class="catalog" :class="isCatalogMenuOpen && 'expand'"  @click.outside="isCatalogMenuOpen = false">
+                    <button @click="isCatalogMenuOpen = !isCatalogMenuOpen" type="button" class="btn-icon btn-lg btn-half-orange">
                         <span>Каталог</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 3.89543 3.89543 3 5 3H9C10.1046 3 11 3.89543 11 5V9C11 10.1046 10.1046 11 9 11H5C3.89543 11 3 10.1046 3 9V5ZM9 5H5V9H9V5Z" fill="#E89F32"/>
@@ -100,8 +103,8 @@
                         </div>
                     </div>
                 </div>
-                <ul class="menu">
-                    <li class="close-icon">
+                <ul class="menu" :class="isMobileMenuOpen && 'expand'">
+                    <li class="close-icon" @click="isMobileMenuOpen = !!0">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7747 8.22535C20.2303 8.68096 20.2303 9.41965 19.7747 9.87526L9.87517 19.7748C9.41956 20.2304 8.68086 20.2304 8.22525 19.7748C7.76964 19.3191 7.76964 18.5805 8.22525 18.1248L18.1247 8.22535C18.5804 7.76974 19.3191 7.76974 19.7747 8.22535Z"/>
@@ -156,11 +159,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="mobile-menu-toggler">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 7.00016C3.5 6.35583 4.02233 5.8335 4.66667 5.8335H23.3333C23.9777 5.8335 24.5 6.35583 24.5 7.00016C24.5 7.6445 23.9777 8.16683 23.3333 8.16683H4.66667C4.02233 8.16683 3.5 7.6445 3.5 7.00016Z" fill="white"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 14.0002C3.5 13.3558 4.02233 12.8335 4.66667 12.8335H23.3333C23.9777 12.8335 24.5 13.3558 24.5 14.0002C24.5 14.6445 23.9777 15.1668 23.3333 15.1668H4.66667C4.02233 15.1668 3.5 14.6445 3.5 14.0002Z" fill="white"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 21.0002C3.5 20.3558 4.02233 19.8335 4.66667 19.8335H23.3333C23.9777 19.8335 24.5 20.3558 24.5 21.0002C24.5 21.6445 23.9777 22.1668 23.3333 22.1668H4.66667C4.02233 22.1668 3.5 21.6445 3.5 21.0002Z" fill="white"/>
+                <div class="mobile-menu-toggler" @click="isMobileMenuOpen = !!1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="none"  @click="isMobileMenuOpen = !isMobileMenuOpen">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 7.00016C3.5 6.35583 4.02233 5.8335 4.66667 5.8335H23.3333C23.9777 5.8335 24.5 6.35583 24.5 7.00016C24.5 7.6445 23.9777 8.16683 23.3333 8.16683H4.66667C4.02233 8.16683 3.5 7.6445 3.5 7.00016Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 14.0002C3.5 13.3558 4.02233 12.8335 4.66667 12.8335H23.3333C23.9777 12.8335 24.5 13.3558 24.5 14.0002C24.5 14.6445 23.9777 15.1668 23.3333 15.1668H4.66667C4.02233 15.1668 3.5 14.6445 3.5 14.0002Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 21.0002C3.5 20.3558 4.02233 19.8335 4.66667 19.8335H23.3333C23.9777 19.8335 24.5 20.3558 24.5 21.0002C24.5 21.6445 23.9777 22.1668 23.3333 22.1668H4.66667C4.02233 22.1668 3.5 21.6445 3.5 21.0002Z" />
                     </svg>
                 </div>
             </nav>
@@ -1334,5 +1337,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/alpine-init.js"></script>
 </body>
 </html>

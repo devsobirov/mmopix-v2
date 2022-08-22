@@ -68,10 +68,10 @@ header {
                 }
                 
             }
-
-            &:hover > .submenu {
-                display: flex; top: 100%; visibility: visible;
-                border-top: $border-default;transition: top .4s;}
+        }
+        .catalog.expand > .submenu {
+            display: flex; top: 100%; visibility: visible;
+            border-top: $border-default;transition: top .4s;
         }
 
         .menu {
@@ -140,7 +140,7 @@ header {
                 &:hover > .submenu {display: block;}
             }
         }
-        .mobile-menu-toggler {display: none;  cursor: pointer;}
+        .mobile-menu-toggler {display: none;  cursor: pointer; svg {width: 28px; height: 28px; fill: $white;}}
     }
 }
 

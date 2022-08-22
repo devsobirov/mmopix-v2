@@ -835,7 +835,7 @@ header nav .catalog .submenu .subline .subline-title h4 {
 header nav .catalog .submenu .subline ul li {
   margin-bottom: 15px;
 }
-header nav .catalog:hover > .submenu {
+header nav .catalog.expand > .submenu {
   display: flex;
   top: 100%;
   visibility: visible;
@@ -922,6 +922,11 @@ header nav .actions .account:hover > .submenu {
 header nav .mobile-menu-toggler {
   display: none;
   cursor: pointer;
+}
+header nav .mobile-menu-toggler svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
 }
 
 .section {

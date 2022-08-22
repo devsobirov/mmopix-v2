@@ -21,8 +21,9 @@
         height: 90px;
         nav {
             .catalog {height: 90px; .submenu {overflow: auto;}}
-            .menu {
-                display: none; 
+            .menu {display: none;}
+            .menu.expand {
+                display: flex; 
                 flex-direction: column;
                 gap: 3rem;
                 position: fixed;

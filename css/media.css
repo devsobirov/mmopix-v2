@@ -35,6 +35,9 @@
   }
   header nav .menu {
     display: none;
+  }
+  header nav .menu.expand {
+    display: flex;
     flex-direction: column;
     gap: 3rem;
     position: fixed;
@@ -48,14 +51,14 @@
     background-color: #272C37;
     z-index: 15;
   }
-  header nav .menu .close-icon {
+  header nav .menu.expand .close-icon {
     visibility: visible;
     top: 28px;
     right: 60px;
     position: absolute;
     z-index: 16;
   }
-  header nav .menu .close-icon svg {
+  header nav .menu.expand .close-icon svg {
     width: 28px;
     height: 28px;
     fill: #fff;
