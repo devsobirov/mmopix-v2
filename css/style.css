@@ -788,6 +788,9 @@ header {
   background: #272C37;
   z-index: 500;
 }
+header .container {
+  overflow-x: unset;
+}
 header nav {
   width: 100%;
   position: relative;
@@ -801,16 +804,21 @@ header nav .logo .logo-sm {
   display: none;
 }
 header nav .catalog {
+  height: 100px;
+  display: flex;
+  align-items: center;
   margin: 0 30px;
 }
 header nav .catalog .submenu {
   position: absolute;
   width: 80%;
   left: 10%;
-  top: 60px;
+  top: 80%;
   background: #272C37;
   padding: 50px;
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  visibility: hidden;
   gap: 60px;
   border-radius: 0px 0px 30px 30px;
 }
@@ -829,12 +837,19 @@ header nav .catalog .submenu .subline ul li {
 }
 header nav .catalog:hover > .submenu {
   display: flex;
+  top: 100%;
+  visibility: visible;
+  border-top: 1px solid rgba(95, 105, 130, 0.15);
+  transition: top 0.4s;
 }
 header nav .menu {
   width: 100%;
   display: flex;
   gap: 1.5rem;
   margin-right: 30px;
+}
+header nav .menu .close-icon {
+  visibility: hidden;
 }
 header nav .actions {
   display: flex;
