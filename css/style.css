@@ -1015,6 +1015,78 @@ header nav .mobile-menu-toggler svg {
   margin-bottom: 40px;
 }
 
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  border-radius: 60px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.carousel-wrapper .carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 6.625rem 6rem;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90.08deg, rgba(39, 44, 55, 0.95) 29.04%, rgba(39, 44, 55, 0.79) 42.18%, rgba(39, 44, 55, 0.58) 48.63%, rgba(39, 44, 55, 0) 61.27%), url(../img/banner_main.jpg);
+  background-position: top center;
+  background-size: cover;
+}
+.carousel-wrapper .carousel-inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 45%;
+}
+.carousel-wrapper .carousel-inner .banner-title h3 {
+  font-size: 2.25rem;
+}
+.carousel-wrapper .carousel-inner .banner-description {
+  max-width: 85%;
+}
+.carousel-wrapper .carousel-inner .banner-action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.carousel-wrapper .carousel-inner .banner-action .product-price {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.carousel-wrapper .carousel-inner .banner-action .product-price span {
+  color: #E89F32;
+  font-weight: 500;
+}
+.carousel-wrapper .carousel-inner .banner-action .product-price span.unit {
+  color: #5F6982;
+}
+.carousel-wrapper .carousel-inner .banner-action .product-price del {
+  color: #5F6982;
+}
+.carousel-wrapper .carousel-controls {
+  position: absolute;
+  z-index: 15;
+  left: 6rem;
+  bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.carousel-wrapper .carousel-controls .control-item {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+.carousel-wrapper .carousel-controls .control-item.active {
+  width: 18px;
+  background: rgb(255, 255, 255);
+}
+
 .card-service {
   transition: all 0.5s;
 }

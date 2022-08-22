@@ -198,6 +198,61 @@ header {
     .toggle-menu {display: flex;align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 40px;}
 }
 
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    border-radius: 60px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    .carousel-item {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 6.625rem 6rem;
+        top: 0; left: 0;
+        background: linear-gradient(
+                90.08deg, rgba(39, 44, 55, 0.95) 
+                29.04%, rgba(39, 44, 55, 0.79) 
+                42.18%, rgba(39, 44, 55, 0.58) 48.63%, 
+                rgba(39, 44, 55, 0) 61.27%
+            ), url(../img/banner_main.jpg);
+        background-position: top center;
+        background-size: cover;
+    }
+
+    .carousel-inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        max-width: 45%;
+        .banner-title h3 {font-size: 2.25rem;}
+        .banner-description {max-width: 85%;}
+        .banner-action {
+            display: flex; align-items: center; gap: 20px;
+            .product-price {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                span {color: $orange_primary; font-weight: 500;}
+                span.unit {color: $gray;}
+                del {color: $gray;}
+            }
+        }
+        
+    }
+
+    .carousel-controls {
+        position: absolute;
+        z-index: 15;
+        left: 6rem;
+        bottom: 2.5rem;
+        display: flex; align-items: center; gap: 10px;
+        .control-item {display: inline-block; width: 8px; height: 8px; background: rgba(255,255,255, .15); border-radius: 10px;}
+        .control-item.active {width: 18px; background: rgba(255,255,255, 1);}
+    }
+}
+
 .card-service {
     .icon-single {min-height: 50px; min-width: 50px; svg {fill: $orange_primary; width: 20px; height: 20px;}}
     .card-content {flex-direction: row; align-items: center; padding: 15px; gap: 15px;}
