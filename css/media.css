@@ -268,6 +268,18 @@
   .section.comments .comment-reply .comment-reply .comment-reply {
     padding-left: 0.25rem;
   }
+  .product-multirow-carousel {
+    margin-left: -20px;
+  }
+  .product-multirow-carousel .slick-slide {
+    margin-left: 20px;
+  }
+  .reviews-carousel, .blog-carousel {
+    margin-left: -20px;
+  }
+  .reviews-carousel .slick-slide, .blog-carousel .slick-slide {
+    margin-left: 20px;
+  }
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .section {
@@ -613,5 +625,20 @@
   }
   .section.comments .comment-reply .comment-reply .comment-reply {
     padding-left: 0.25rem;
+  }
+  .section-games .toggle-menu {
+    margin-bottom: 5px;
+  }
+  .product-multirow-carousel {
+    margin-left: -15px;
+  }
+  .product-multirow-carousel .slick-slide {
+    margin-left: 15px;
+  }
+  .reviews-carousel, .blog-carousel {
+    margin-left: 0;
+  }
+  .reviews-carousel .slick-slide, .blog-carousel .slick-slide {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=media.css.map */

@@ -1901,7 +1901,7 @@
         </div>
     </footer>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/slick/slick.min.js"></script>
     <script src="./js/alpine-init.js"></script>
     <script>
@@ -1920,6 +1920,22 @@
             arrows: true,
             prevArrow: $('.games-carousel-control.left'),
             nextArrow: $('.games-carousel-control.right'),
+            responsive: [
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+            ],
         });
 
         $('.coins-carousel').slick({
@@ -1929,6 +1945,22 @@
             arrows: true,
             prevArrow: $('.coins-carousel-control.left'),
             nextArrow: $('.coins-carousel-control.right'),
+            responsive: [
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+            ],
         });
 
         $('.services-carousel').slick({
@@ -1938,6 +1970,22 @@
             arrows: true,
             prevArrow: $('.services-carousel-control.left'),
             nextArrow: $('.services-carousel-control.right'),
+            responsive: [
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+            ],
         });
 
         $('.reviews-carousel').slick({
@@ -1947,6 +1995,22 @@
             arrows: true,
             prevArrow: $('.reviews-carousel-control.left'),
             nextArrow: $('.reviews-carousel-control.right'),
+            responsive: [
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ],
         })
 
         $('.blog-carousel').slick({
@@ -1956,6 +2020,22 @@
             arrows: true,
             prevArrow: $('.blog-carousel-control.left'),
             nextArrow: $('.blog-carousel-control.right'),
+            responsive: [
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ],
         })
     </script>
 </body>

@@ -108,6 +108,10 @@
         }
     }
 
+    // Carousels
+    .product-multirow-carousel {margin-left: -20px;.slick-slide {margin-left: 20px;}}
+    .reviews-carousel, .blog-carousel {margin-left: -20px;.slick-slide {margin-left: 20px;}}
+
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -294,4 +298,9 @@
             }
         }
     }
+
+    // Carousels
+    .section-games {.toggle-menu {margin-bottom: 5px;}}
+    .product-multirow-carousel {margin-left: -15px;.slick-slide {margin-left: 15px;}}
+    .reviews-carousel, .blog-carousel {margin-left: 0;.slick-slide {margin-left: 0;}}
 }
