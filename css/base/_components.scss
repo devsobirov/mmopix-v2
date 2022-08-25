@@ -188,7 +188,8 @@
     display: flex;
 
     .card-content {
-        padding: 20px; display: flex; flex-direction: column;
+        display: flex; flex-direction: column;
+        padding: 20px; 
         .details {display: flex; flex-direction: column;}
     }
     

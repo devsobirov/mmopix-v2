@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="globalData">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="lib/slick/slick.css">
+    <link rel="stylesheet" href="lib/slick/slick-theme.css">
+
+    <script src="./js/alpine.js" defer></script>
 </head>
 <body>
     <header>
@@ -161,7 +165,7 @@
 
     <main>
 
-        <section class="section product-page pt-50" 
+        <section x-data="productData" class="section product-page pt-50" 
             style="background: linear-gradient(180deg, rgba(32, 36, 45, 0.9) 0vh, rgba(32, 36, 45, 0.92) 100vh, #20242D 150vh),
             url(./img/products/product_bg.png) center top /auto 150vh no-repeat"
         >
@@ -200,18 +204,21 @@
                         </div>
 
                         <div class="product-prices">
-                            <div class="price-card featured">
+                            <template x-for="edition in editions">
+                                <div class="price-card" @click="setActiveEdition(edition)" :class="edition.id === activeEdition.id && 'featured'" :key="edition.id">
+                                    <span class="product-edition" x-text="edition.title"></span>
+                                    <span class="product-price" x-text="edition.price + ' ₽'"></span>
+                                </div>
+                            </template>
+                            
+                            <!-- <div class="price-card">
                                 <span class="product-edition">Deluxe Edition</span>
                                 <span class="product-price">1 290 ₽</span>
                             </div>
                             <div class="price-card">
                                 <span class="product-edition">Deluxe Edition</span>
                                 <span class="product-price">1 290 ₽</span>
-                            </div>
-                            <div class="price-card">
-                                <span class="product-edition">Deluxe Edition</span>
-                                <span class="product-price">1 290 ₽</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -304,10 +311,10 @@
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 13C13.0523 13 13.5 13.4477 13.5 14V16C13.5 16.5523 13.0523 17 12.5 17C11.9477 17 11.5 16.5523 11.5 16V14C11.5 13.4477 11.9477 13 12.5 13Z"/>
                                         </svg>
                                     </button>
-                                    <span class="badge-discount">-70%</span>
+                                    <span class="badge-discount" x-show="discount" x-text="'-' + discount +'%'"></span>
                                     <div class="product-price">
-                                        <span>1 290 ₽</span>
-                                        <del>1 990 ₽</del>
+                                        <span x-text="discountedPrice() + ' ₽'"></span>
+                                        <del x-text="activeEdition.price + ' ₽'"></del>
                                     </div>
                                 </div>
                             </div>
@@ -319,19 +326,19 @@
                                 <button type="button" class="toggle-link">Трейлеры</button>
                             </div>
                             <div class="media-wrapper">
-                                <div class="media-items">
+                                <div class="media-items screenshots-carousel">
                                     <img src="./img/games/1.png" alt="Game thumb">
                                     <img src="./img/games/2.png" alt="Game thumb">
                                     <img src="./img/games/3.png" alt="Game thumb">
                                     <img src="./img/games/3.png" alt="Game thumb">
                                 </div>
-                                <span class="icon-control left">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                <span class="screenshots-carousel-controls icon-control left">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 13.2072C7.90237 12.8166 7.90237 12.1835 8.29289 11.793L14.2929 5.79296C14.6834 5.40243 15.3166 5.40243 15.7071 5.79296C16.0976 6.18348 16.0976 6.81664 15.7071 7.20717L10.4142 12.5001L15.7071 17.793C16.0976 18.1835 16.0976 18.8166 15.7071 19.2072C15.3166 19.5977 14.6834 19.5977 14.2929 19.2072L8.29289 13.2072Z"></path>
                                     </svg>
                                 </span>
-                                <span class="icon-control right">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                <span class="screenshots-carousel-controls icon-control right">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 25" fill="none">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 11.7929C16.0976 12.1834 16.0976 12.8166 15.7071 13.2071L9.70711 19.2071C9.31658 19.5976 8.68342 19.5976 8.29289 19.2071C7.90237 18.8166 7.90237 18.1834 8.29289 17.7929L13.5858 12.5L8.29289 7.20711C7.90237 6.81658 7.90237 6.18342 8.29289 5.79289C8.68342 5.40237 9.31658 5.40237 9.70711 5.79289L15.7071 11.7929Z"></path>
                                     </svg>
                                 </span>
@@ -1027,6 +1034,38 @@
         </div>
     </footer>
 
-    <script src="js/utils.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/slick/slick.min.js"></script>
+    <script src="./js/alpine-init.js"></script>
+    <script src="./js/custom-carousel.js"></script>
+    <script src="./js/utils.js"></script>
+    <script>
+        function getEditions() {
+            return [
+                { id: 1, price: 3400, title: 'Deluxe Edition'},
+                { id: 2, price: 2800, title: 'Standart Edition'},
+                { id: 3, price: 2200, title: 'Econom Edition'}
+            ];
+        }
+        function getInitialActiveEdition() {
+            return { id: 1, price: 3400, title: 'Deluxe Edition'}
+        }
+        function productData() {
+            return {
+                editions: getEditions(),
+                activeEdition: getInitialActiveEdition(),
+                discount: 70,
+                setActiveEdition(edition) {
+                    this.activeEdition = edition;
+                },
+                discountedPrice() {
+                    if (this.discount) {
+                        return Math.round(parseInt(this.activeEdition.price) * this.discount/100);
+                    }
+                    return this.activeEdition.price;
+                }
+            }
+        }
+    </script>
 </body>
 </html>

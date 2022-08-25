@@ -518,9 +518,9 @@ textarea {
   display: flex;
 }
 .card .card-content {
-  padding: 20px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 .card .card-content .details {
   display: flex;
@@ -829,17 +829,21 @@ header nav .catalog .submenu .subline .subline-title {
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
-}
-header nav .catalog .submenu .subline .subline-title h4 {
+  cursor: pointer;
   font-size: 18px;
   line-height: 150%;
+  font-weight: 700;
+  transition: none;
+}
+header nav .catalog .submenu .subline .subline-title > * {
+  transition: none;
 }
 header nav .catalog .submenu .subline ul li {
   margin-bottom: 15px;
-  transition: all 0.4s;
+  transition: none;
 }
 header nav .catalog .submenu .subline ul li a {
-  transition: inherit;
+  transition: color 0.4s;
 }
 header nav .catalog .submenu .subline ul li a:hover {
   color: #E89F32;
@@ -857,7 +861,6 @@ header nav .menu {
   gap: 1.5rem;
   margin-right: 30px;
   right: 100%;
-  transition: all 0.4s;
 }
 header nav .menu .close-icon {
   visibility: hidden;
@@ -1088,11 +1091,13 @@ header nav .mobile-menu-toggler svg {
 }
 
 .card-service {
+  cursor: pointer;
   transition: all 0.5s;
 }
 .card-service .icon-single {
   min-height: 50px;
   min-width: 50px;
+  border-radius: 16px;
 }
 .card-service .icon-single svg {
   fill: #E89F32;
@@ -1160,6 +1165,8 @@ header nav .mobile-menu-toggler svg {
 }
 .card-product .card-content, .card-article .card-content {
   background-color: #272C37;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .card-product:hover, .card-article:hover {
   transform: translateY(-24px);
@@ -1170,7 +1177,7 @@ header nav .mobile-menu-toggler svg {
 
 .card-review .review-icon, .card-review .review-content, .card-review .review-date {
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -1283,14 +1290,23 @@ footer .inner .payment-info img {
   color: #5F6982;
   font-size: 16px;
   font-weight: 400;
+  cursor: pointer;
+  transition: 0.75s;
 }
 .breadcrumb .icon-breadcrumb {
   padding-top: 4px;
+  transition: 0.75s;
 }
 .breadcrumb .icon-breadcrumb > svg {
   fill: #5F6982;
   width: 16px;
   height: 16px;
+}
+.breadcrumb li:hover a, .breadcrumb li:hover span {
+  color: #fff;
+}
+.breadcrumb li:hover svg {
+  fill: #fff;
 }
 
 .page-header {
@@ -1504,7 +1520,7 @@ footer .inner .payment-info img {
   position: relative;
   display: block;
   max-width: 100%;
-  height: 10rem;
+  height: 10.5rem;
   overflow: hidden;
 }
 .product-single-content .media-wrapper .media-items {
@@ -1512,8 +1528,6 @@ footer .inner .payment-info img {
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  gap: 1.25rem;
 }
 .product-single-content .media-wrapper .media-items img {
   display: inline-block;
@@ -1525,6 +1539,20 @@ footer .inner .payment-info img {
   position: absolute;
   top: calc(50% - 22.5px);
   z-index: 5;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+.product-single-content .media-wrapper .icon-control svg {
+  width: 24px;
+  height: 24px;
+  fill: #5F6982;
+  transition: inherit;
+}
+.product-single-content .media-wrapper .icon-control:hover {
+  background-color: #272C37;
+}
+.product-single-content .media-wrapper .icon-control:hover svg {
+  fill: #fff;
 }
 .product-single-content .media-wrapper .icon-control.right {
   right: 2%;
@@ -1991,4 +2019,8 @@ footer .inner .payment-info img {
 
 .blog-carousel .slick-slide {
   padding-top: 25px;
+}
+
+.screenshots-carousel .slick-slide + .slick-slide {
+  margin-left: 20px;
 }/*# sourceMappingURL=style.css.map */
