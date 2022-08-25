@@ -1785,6 +1785,8 @@ footer .inner .payment-info img {
   grid-template-columns: 5fr 7fr;
   align-items: start;
   padding: 30px;
+  background-color: #272C37;
+  transform: unset;
 }
 .section-order .card-basket .card-banner {
   height: 8.75rem;

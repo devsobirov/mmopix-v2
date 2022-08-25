@@ -654,6 +654,8 @@ footer {
         grid-template-columns: 5fr 7fr;
         align-items: start;
         padding: 30px;
+        background-color: $black_bg;
+        transform: unset;
 
         .card-banner {height: 8.75rem; border-radius: 16px;}
         .card-content {
